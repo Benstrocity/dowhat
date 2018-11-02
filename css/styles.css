@@ -1,0 +1,249 @@
+/*
+    Stylesheet holding styles for my 'DoWhat?' application - Ben Youngblood
+*/
+
+/*CSS styling for main index page*/
+
+/*Setting up global html styles*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+/*Specifying background styles*/
+body {
+    background: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/main-background.png');
+    background-size: 160%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Main h1 heading styles*/
+.main-heading h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    margin: 10% auto 10% auto;
+    border-top: 5px solid #ffa500;
+    border-right: 5px solid #ffa500;
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid #fff;
+    box-sizing: border-box;
+    width: 95%;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.main-heading span {
+    color: #ffa500 ;
+}
+
+/*Position main content/output*/
+.content-pos {
+    margin: 20% auto auto auto;
+}
+
+/*Styling for 'Start' button*/
+.start a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+#st-btn {
+    width: 60%;
+    display: block;
+    padding: 5%;
+    font-size: 2.5rem;
+    border: 2px solid #fff;
+    background-color: #00000050;
+    border-radius: 25px;
+    margin: auto;
+}
+
+/*Styling for 'Form' NOT IN PRODUCTION*/
+/*
+#select-form {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+#weather {
+    text-align: center;
+    font-size: 3rem;
+    height: 5rem;
+    width: 50%;
+}
+
+#select-form label {
+    
+}
+
+input[type=radio] {
+    height: 2em;
+    width: .75em;
+    vertical-align: middle;
+}
+*/
+
+/*Countdown timer styles*/
+#timer {
+    text-align: center;
+}
+
+#timer progress {
+    text-align: center;
+    height: 30px;
+    width: 75%;
+    border: 3px solid #fff;
+    border-radius: 35px;
+}
+
+#timer progress::-webkit-progress-value {
+    background-color: #ffa500;
+    border-radius: 35px;
+    transition: width 3s ease;
+}
+
+#timer progress::-webkit-progress-bar {
+    background-color: #555;
+    border-radius: 35px;
+}
+
+/*Output styles*/
+#do-what {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 3%;
+    color: #fff;
+    background-color: #00000050;
+    min-height: 150px;
+    border: 3px solid #fff;
+    border-radius: 35px;
+    width: 90%;
+    margin: auto;
+}
+
+#refresh-app {
+    display: none;
+}
+
+#refresh {
+    text-align: center;
+    width: 20%;
+    font-size: 4.5rem;
+    color: #ffa500;
+    margin: 5% auto auto auto;
+    border: 4px solid #fff;
+    background-color: #00000050;
+    border-radius: 25px;
+    margin-bottom: 2.5%;
+}
+
+#click-reload {
+    margin: auto;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#click-reload span {
+    color: #ffa500;
+}
+
+/*Main footer styles*/
+.main-footer {
+    font-size: 1.5rem;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 3%;
+}
+
+.main-footer span {
+    color: #fff;
+}
+
+.main-footer ul {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+
+.main-footer li {
+    border-bottom: 2px solid #ffa500;
+}
+
+.main-footer a {
+    flex: 1;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-footer a:active {
+    color: #ffa500;
+}
+
+/*Media query for larger mobile devices*/
+@media (min-width: 768px) {
+    .main-heading h1 {
+        font-size: 8rem;
+    }
+    
+    .content-pos {
+        margin-top: -2%;
+    }
+    
+    .main-footer {
+        font-size: 2.5rem;
+    }
+    
+    #do-what {
+        font-size: 2rem;
+    }
+    
+    #refresh {
+        font-size: 7rem; 
+    }
+    
+    #click-reload {
+        font-size: 2rem;
+    }
+}
+
+/*Media query for smaller legacy devices*/
+@media (max-width: 360px) {
+    .main-heading h1 {
+        font-size: 3rem;
+        border-width: 2px;
+    }
+    
+    #do-what {
+        font-size: 1rem;
+        border-width: 2px;
+    }
+    
+    #refresh {
+        font-size: 3.5rem;
+        border-width: 2px;
+    }
+    
+    #click-reload {
+        font-size: 1.25rem;
+    }
+    
+    .main-footer {
+        font-size: 1.25rem;
+    }
+}

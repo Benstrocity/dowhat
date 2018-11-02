@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+		<title></title>
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+        
+        <div class="main-wrapper">
+            <heading class="main-heading">
+                <h1><span>Do</span>What?</h1>
+            </heading>
+            
+            <div class="content-pos">
+                <div class="start">
+                    <a href="#" onClick="startTimer()"><p id="st-btn">Start</p></a>
+                </div>
+    <!-- NOT IN PRODUCTION
+                <div id="select-form">
+                    <form id="form">
+                        <select id="weather">
+                            <option value="hotsunny">Hot and Sunny</option>
+                            <option value="warmsunny">Warm and Sunny</option>
+                            <option value="coolsunny">Cool and Sunny</option>
+                            <option value="coldsunny">Cold and Sunny</option>
+                            <option value="hotcloudy">Hot and Cloudy</option>
+                            <option value="warmcloudy">Warm and Cloudy</option>
+                            <option value="coolcloudy">Cool and Cloudy</option>
+                            <option value="coldcloudy">Cold and Cloudy</option>
+                            <option value="hotrain">Hot and Raining</option>
+                            <option value="warmrain">Warm and Raining></option>
+                            <option value="coolrain">Cool and Raining</option>
+                            <option value="coldrain">Cold and Raining</option>
+                            <option value="coldsnow">Cold and Snowing</option>
+                        </select>
+                        <br>
+                        <input type="radio" id="indoors" value="indoors" name="inout">
+                        <label for="indoors">Indoors</label>
+                        <input type="radio" id="outdoors" value="outdoors" name="inout">
+                        <label for="outdoors">Outdoors</label>
+
+                    </form>
+                </div>
+    -->         
+                <div id="timer">
+                    <progress value="0" max="1" id="progressBar"></progress>
+                </div>
+
+                <div id="output">
+                    <div id="do-what">
+
+                    </div>
+                    <div id="refresh-app" onClick="updateReload()">
+                        <p id="refresh">&#8617;</p>
+                        <p id="click-reload"><span>Tap</span> to Start Over</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="main-footer">
+            <nav>
+                <ul>
+                    <a href="a"><li>Home</li></a>
+                    <a href="a"><li>About</li></a>
+                    <a href="a"><li>Help</li></a>
+                </ul>
+            </nav>
+        </footer>
+        
+        <script src="js/game.js"></script>
+	</body>
+</html>
