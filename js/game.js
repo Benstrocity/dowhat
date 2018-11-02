@@ -25,10 +25,10 @@ function startTimer () {
     document.getElementById('st-btn').style.display = "none";
     document.getElementById('timer').style.display = "block";
     
-    var timeleft = 1;
+    var timeLeft = 1;
     var timer = setInterval(function(){
-    document.getElementById("progressBar").value = 1 - --timeleft;
-    if(timeleft === -3){ 
+    document.getElementById("progressBar").value = 1 - --timeLeft;
+    if(timeLeft === -1){ 
         updateDisplay();
     }
     },1000);
