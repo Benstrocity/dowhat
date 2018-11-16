@@ -1,29 +1,45 @@
 /*
     https://github.com/Benstrocity/dowhat.git
 */
-var randArr = ['Get a paintbrush and some of your favorite paint; it\'s time to unleash your inner Picasso!', 'Put on some good shoes, it\'s time to go on a walk through the nearest park or on the closest hiking trail!', 'Find the closest grocery store and buy yourself some baking supplies; you\'re about to bake a cake!', 'Put on something comfy and find a place on the couch or bed, it\'s movie time. Find something you\'ve never seen before!', 'Call up three or four of your closest friends. Get ready for an impromptu board game night!'];
-var doWhat = ''; 
+var freeArr = ['Free 1', 'Free 2', 'Free 3', 'Free 4', 'Free 5'];
+var outArr = ['Out 1', 'Out 2', 'Out 3', 'Out 4', 'Out 5'];
+var foodArr = ['Food 1', 'Food 2', 'Food 3', 'Food 4', 'Food 5'];
+var entArr = ['Free 1', 'Free 2', 'Free 3', 'Free 4', 'Free 5'];
+var doWhat = '';
+var displayDoWhat = document.querySelector('#output');
+var startOne = document.querySelector('#start-free');
+var startTwo = document.querySelector('#start-out');
+var startThree = document.querySelector('#start-food');
+var startFour = document.querySelector('#start-ent');
+var loading = document.querySelector('#timer');
 
 startDisplay();
 getDoWhat();
 
 function startDisplay () {
-    document.getElementById('st-btn').style.display = "block";
-    document.getElementById('output').style.display = "none";
-    document.getElementById('timer').style.display = "none";
+    startOne.style.display = "block";
+    startTwo.style.display = "block";
+    startThree.style.display = "block";
+    startFour.style.display = "block";
+    displayDoWhat.style.display = "none";
+    loading.style.display = "none";
 }
 
 function getDoWhat () {
     var randNum = Math.floor(Math.random() * 5);
     var i = randNum;
-    doWhat += "<h2>" + randArr[i] + "</h2>";
-    document.getElementById('do-what').innerHTML = doWhat;
-    
+    if (getDoWhat == startOne) {
+    doWhat += "<h2>" + freeArr[i] + "</h2>";
+    document.getElementById('do-what').innerHTML = doWhat; 
+    }
 }
 
 function startTimer () {
-    document.getElementById('st-btn').style.display = "none";
-    document.getElementById('timer').style.display = "block";
+    startOne.style.display = "none";
+    startTwo.style.display = "none";
+    startThree.style.display = "none";
+    startFour.style.display = "none";
+    loading.style.display = "block";
     
     var timeLeft = 1;
     var timer = setInterval(function(){
@@ -35,7 +51,7 @@ function startTimer () {
 }
 
 function updateDisplay () {
-    document.getElementById('output').style.display = "block";
+    displayDoWhat.style.display = "block";
     document.getElementById('refresh-app').style.display = "block";
     document.getElementById('timer').style.display = "none";
 }
@@ -43,3 +59,8 @@ function updateDisplay () {
 function updateReload () {
     window.location.reload();
 }
+
+startOne.addEventListener('click', startTimer);
+startTwo.addEventListener('click', startTimer);
+startThree.addEventListener('click', startTimer);
+startFour.addEventListener('click', startTimer);
