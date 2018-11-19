@@ -49,7 +49,7 @@ body {
     margin: 20% auto auto auto;
 }
 
-/*Styling for 'Start' button*/
+/*Styling for 'Start' buttons*/
 .start a {
     text-decoration: none;
     color: #fff;
@@ -59,7 +59,8 @@ body {
 #start-free,
 #start-out,
 #start-food,
-#start-ent {
+#start-ent,
+#start-any {
     width: 60%;
     display: block;
     padding: 3%;
@@ -71,19 +72,29 @@ body {
 }
 
 #start-free {
-    
+    border-color: #fff;
 }
 
 #start-out {
-    
+    border-color: #ffa500;
 }
 
 #start-food {
-    
+    border-color: #fff;
 }
 
 #start-ent {
-    
+    border-color: #ffa500;
+}
+
+#start-any {
+    border-color: #fff;
+}
+
+/*Styling for loading screen*/
+#loading {
+    display: none;
+    text-align: center;
 }
 
 /*Styling for 'Form' NOT IN PRODUCTION*/
@@ -111,30 +122,6 @@ input[type=radio] {
     vertical-align: middle;
 }
 */
-
-/*Countdown timer styles*/
-#timer {
-    text-align: center;
-}
-
-#timer progress {
-    text-align: center;
-    height: 30px;
-    width: 75%;
-    border: 3px solid #fff;
-    border-radius: 35px;
-}
-
-#timer progress::-webkit-progress-value {
-    background-color: #ffa500;
-    border-radius: 35px;
-    transition: width .8s;
-}
-
-#timer progress::-webkit-progress-bar {
-    background-color: #555;
-    border-radius: 35px;
-}
 
 /*Output styles*/
 #do-what {
@@ -182,38 +169,17 @@ input[type=radio] {
 
 /*Main footer styles*/
 .main-footer {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 100%;
     color: #fff;
-    position: absolute;
+    text-align: center;
     bottom: 3%;
     padding-top: 5%;
+    position: absolute;
+    bottom: 0;
 }
 
 .main-footer span {
-    color: #fff;
-}
-
-.main-footer ul {
-    list-style: none;
-    display: flex;
-    margin: auto;
-    padding: 0;
-}
-
-.main-footer li {
-    border-bottom: 2px solid #ffa500;
-}
-
-.main-footer a {
-    flex: 1;
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-}
-
-.main-footer a:active {
     color: #ffa500;
 }
 
