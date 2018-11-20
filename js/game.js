@@ -6,10 +6,50 @@
 
 //Defining global scope variables and objects
 var arrObj = {
-    free : ['Free 1', 'Free 2', 'Free 3', 'Free 4', 'Free 5'],
-    outdoors : ['Out 1', 'Out 2', 'Out 3', 'Out 4', 'Out 5'],
-    food : ['Food 1', 'Food 2', 'Food 3', 'Food 4', 'Food 5'],
-    entertain : ['Ent 1', 'Ent 2', 'Ent 3', 'Ent 4', 'Ent 5'],
+    free : [
+        'Put on something comfortable and find a good show on your favorite streaming service.', 
+        'Find random ingredients in your kitchen and make something interesting! You never know what could turn out delicious.', 
+        'Hop on your favorite video game download site and play some new free games.', 
+        'Find interesting workshops and conferences going on nearby for free and sign up.', 
+        'Do some research and find a new skill or hobby to learn. (Programming, drawing, painting, graphic design, singing, etc.)'
+    ],
+    outdoors : [
+        'Plan a picnic.', 
+        'Wait until evening and stargaze.', 
+        'Start a small garden.', 
+        'Plan a short camping trip.', 
+        'Go on a hike.',
+        'Go into your city or a nearby city and be a tourist for the day.',
+        'Grab some friends and have a water balloon fight.',
+        'Get ready to make par. Play some mini golf.',
+        'Play some pick-up basketball.',
+        'Plan a small scavenger hunt with some friends.',
+        'Find a place to have a campfire and make s\'mores',
+        'Gather some fishing equipment and go fishing for the day.'
+    ],
+    food : [
+        'Go eat at a local food truck.', 
+        'It\'s time for some German food! Find a German restaurant and make reservations.', 
+        'Burgers! Burgers! Burgers! Find the best joint in town and get some greasy goodness.', 
+        'Take a trip to Italy without leaving the country. Find a good Italian restaurant and enjoy some pasta.', 
+        '"When the moon hits your eye like a big pizza pie, that\'s amore..." Pizza is on the menu today.',
+        'Fast food. Cheapest place in town. Go.',
+        'Enchiladas, tacos, and cheese dip are on the menu. It\'s time for some Mexican food',
+        'Feeling thirsty? Treat yourself to a delicious smoothy.',
+        'Whether you like sports or not, chicken wings are never a bad thing...grab wings and maybe a beer or two!',
+        'You may or may not be a southern native, but you\'re on your way to eat some country cookin\'. Find the best southern, deep fried, gravy covered, restaurant you can.',
+        'We all need to eat a little lighter sometimes. Wherever the best salad in town is, that\'s where you will be going.'
+    ],
+    entertain : [
+        'Find a play that is going on near you and buy some tickets.', 
+        'Where is the nearest concert venue? Hop online and find a concert near you and buy some tickets!', 
+        'Football season? Basketball season? Baseball season? Whichever season you are in, pick up some tickets and go to a ball game.', 
+        'Locate the nearest go-cart track and gather some friends to race.', 
+        'Lights. Camera. Action. Find a new or interesting movie that is playing and enjoy the show.',
+        'Find a dinner play house and have dinner while watching a show.',
+        'Plan a trip to an amusement park and take some friends for the day.',
+        'Plan a trip to a nearby lake and rent some jet skis to ride.'
+    ],
 };
 var randArr = [arrObj.free, arrObj.outdoors, arrObj.food, arrObj.entertain];
 var i;

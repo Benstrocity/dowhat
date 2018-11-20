@@ -13,23 +13,35 @@
 html {
     font-family: Arial, sans-serif;
     height: 100%;
-    overflow-y: hidden;
+    width: 100%;
 }
 
 /*Specifying background styles*/
-body {
+
+.main-wrapper {
     background: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/main-background.png');
     background-size: 160%;
     background-position: center;
     background-repeat: no-repeat;
+    width: 50%;
+    margin: auto;
+    min-height: 720px;
+    max-width: 450px;
+    min-width: 300px;
+    position: relative;
 }
 
 /*Main h1 heading styles*/
+.main-heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
 .main-heading h1 {
     text-align: center;
     font-size: 4rem;
-    color: white;
-    margin: 10% auto 10% auto;
+    color: #fff;
     border-top: 3px solid #ffa500;
     border-right: 3px solid #ffa500;
     border-bottom: 3px solid #fff;
@@ -41,12 +53,12 @@ body {
 }
 
 .main-heading span {
-    color: #ffa500 ;
+    color: #ffa500;
 }
 
 /*Position main content/output*/
 .content-pos {
-    margin: 20% auto auto auto;
+    margin-top: -10%;
 }
 
 /*Styling for 'Start' buttons*/
@@ -65,7 +77,7 @@ body {
     display: block;
     padding: 3%;
     font-size: 1.5rem;
-    border: 2px solid #fff;
+    border: 2px solid;
     background-color: #00000050;
     border-radius: 10px;
     margin: 40px auto;
@@ -95,46 +107,29 @@ body {
 #loading {
     display: none;
     text-align: center;
+    margin-top: 50%;
 }
 
-/*Styling for 'Form' NOT IN PRODUCTION*/
-/*
-#select-form {
-    margin: auto;
+#loading p {
     text-align: center;
     color: #fff;
 }
 
-#weather {
-    text-align: center;
-    font-size: 3rem;
-    height: 5rem;
-    width: 50%;
-}
-
-#select-form label {
-    
-}
-
-input[type=radio] {
-    height: 2em;
-    width: .75em;
-    vertical-align: middle;
-}
-*/
-
 /*Output styles*/
 #do-what {
+    display: flex;
     box-sizing: border-box;
     background-color: #00000075;
     min-height: 150px;
     border-radius: 35px;
     width: 90%;
     margin: auto;
+    margin-top: 15%;
 }
 
 #do-what p {
     color: #fff;
+    margin: auto;
     font-size: 1.2rem;
     text-align: center;
     padding: 3%;
@@ -156,6 +151,10 @@ input[type=radio] {
     margin-bottom: 2.5%;
 }
 
+#refresh:hover {
+    cursor: pointer;
+}
+
 #click-reload {
     margin: auto;
     color: #fff;
@@ -169,7 +168,6 @@ input[type=radio] {
 
 /*Main footer styles*/
 .main-footer {
-    font-size: 1.25rem;
     width: 100%;
     color: #fff;
     text-align: center;
@@ -184,54 +182,3 @@ input[type=radio] {
 }
 
 /*Media query for larger mobile devices*/
-@media (min-width: 768px) {
-    .main-heading h1 {
-        font-size: 8rem;
-    }
-    
-    .content-pos {
-        margin-top: -2%;
-    }
-    
-    .main-footer {
-        font-size: 2.5rem;
-    }
-    
-    #do-what {
-        font-size: 2rem;
-    }
-    
-    #refresh {
-        font-size: 7rem; 
-    }
-    
-    #click-reload {
-        font-size: 2rem;
-    }
-}
-
-/*Media query for smaller legacy devices*/
-@media (max-width: 360px) {
-    .main-heading h1 {
-        font-size: 3rem;
-        border-width: 2px;
-    }
-    
-    #do-what {
-        font-size: 1rem;
-        border-width: 2px;
-    }
-    
-    #refresh {
-        font-size: 3.5rem;
-        border-width: 2px;
-    }
-    
-    #click-reload {
-        font-size: 1.25rem;
-    }
-    
-    .main-footer {
-        font-size: 1.25rem;
-    }
-}
