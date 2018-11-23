@@ -27,8 +27,10 @@ html {
     margin: auto;
     min-height: 720px;
     max-width: 450px;
-    min-width: 300px;
+    min-width: 400px;
     position: relative;
+    box-shadow: 5px 5px 15px, -5px 0 15px #000;
+    border-radius: 20px;
 }
 
 /*Main h1 heading styles*/
@@ -182,3 +184,8 @@ html {
 }
 
 /*Media query for larger mobile devices*/
+@media (max-width: 400px) {
+    .main-wrapper {
+        width: 100%;
+    }
+}
