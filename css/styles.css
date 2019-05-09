@@ -6,14 +6,13 @@
 
 /*Setting up global html styles*/
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
+body {
     font-family: Arial, sans-serif;
-    height: 100%;
-    width: 100%;
 }
 
 /*Specifying background styles*/
@@ -23,44 +22,35 @@ html {
     background-size: 160%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 50%;
-    margin: auto;
-    min-height: 720px;
-    max-width: 450px;
-    min-width: 400px;
+    height: 100vh;
+    min-height: 700px;
+    max-width: 500px;
     position: relative;
-    box-shadow: 5px 5px 15px, -5px 0 15px #000;
-    border-radius: 20px;
+    margin: 0px auto;
 }
 
 /*Main h1 heading styles*/
 .main-heading {
     display: flex;
     justify-content: center;
-    margin-top: 10%;
 }
 
 .main-heading h1 {
     text-align: center;
     font-size: 4rem;
     color: #fff;
+    margin: 10px auto 20px auto;
     border-top: 3px solid #ffa500;
     border-right: 3px solid #ffa500;
     border-bottom: 3px solid #fff;
     border-left: 3px solid #fff;
-    box-sizing: border-box;
-    width: 95%;
+    width: 400px;
     border-top-left-radius: 35px;
     border-bottom-right-radius: 35px;
 }
 
 .main-heading span {
     color: #ffa500;
-}
-
-/*Position main content/output*/
-.content-pos {
-    margin-top: -10%;
 }
 
 /*Styling for 'Start' buttons*/
@@ -181,11 +171,4 @@ html {
 
 .main-footer span {
     color: #ffa500;
-}
-
-/*Media query for larger mobile devices*/
-@media (max-width: 400px) {
-    .main-wrapper {
-        width: 100%;
-    }
 }

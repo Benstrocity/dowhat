@@ -5,7 +5,18 @@
 */
 
 //Defining global scope variables and objects
-var arrObj = {
+const paraOutput = document.querySelector('#para-output');
+const displayDoWhat = document.querySelector('#output');
+const startOne = document.querySelector('#start-free');
+const startTwo = document.querySelector('#start-out');
+const startThree = document.querySelector('#start-food');
+const startFour = document.querySelector('#start-ent');
+const startFive = document.querySelector('#start-any');
+const startButtons = document.querySelector('.start');
+const refresh = document.querySelector('#refresh-app');
+const loading = document.querySelector('#loading');
+
+const arrObj = {
     free : [
         'Put on something comfortable and find a good show on your favorite streaming service.', 
         'Find random ingredients in your kitchen and make something interesting! You never know what could turn out delicious.', 
@@ -51,19 +62,6 @@ var arrObj = {
         'Plan a trip to a nearby lake and rent some jet skis to ride.'
     ],
 };
-var randArr = [arrObj.free, arrObj.outdoors, arrObj.food, arrObj.entertain];
-var i;
-var j;
-var paraOutput = document.querySelector('#para-output');
-var displayDoWhat = document.querySelector('#output');
-var startOne = document.querySelector('#start-free');
-var startTwo = document.querySelector('#start-out');
-var startThree = document.querySelector('#start-food');
-var startFour = document.querySelector('#start-ent');
-var startFive = document.querySelector('#start-any');
-var startButtons = document.querySelector('.start');
-var refresh = document.querySelector('#refresh-app');
-var loading = document.querySelector('#loading');
 
 //Function that starts the program. Function called at bottom of code
 function startDisplay () {
@@ -71,105 +69,57 @@ function startDisplay () {
     displayDoWhat.style.display = "none";
 }
 
+//Displays randomized output of selected category
+function showOutput () {
+    loading.style.display = "none";
+    displayDoWhat.style.display = "block";
+    refresh.style.display = "block";
+}
+
+//Displays loading animation for 3 seconds and calls showOutput()
+function showLoading () {
+    loading.style.display = "block";
+    startButtons.style.display = "none";
+    displayDoWhat.style.display = "none";
+    refresh.style.display = "none";
+    setTimeout(showOutput, 3000);
+}
+
 //Functions to randomize based on button click
 startOne.addEventListener('click', function() {
     showLoading();
-    function showLoading () {
-        loading.style.display = "block";
-        startButtons.style.display = "none";
-        displayDoWhat.style.display = "none";
-        refresh.style.display = "none";
-        setTimeout(showOutput, 3000);
-    }
     
-    function showOutput () {
-        loading.style.display = "none";
-        displayDoWhat.style.display = "block";
-        refresh.style.display = "block";
-    }
-    
-    i = Math.floor(Math.random() * 5); //Randomizes a number
+    let i = Math.floor(Math.random() * 5); //Randomizes a number
     paraOutput.innerHTML = arrObj.free[i]; //Applies random number to array item to display
+
 });
 
 startTwo.addEventListener('click', function() {
     showLoading();
-    function showLoading () {
-        loading.style.display = "block";
-        startButtons.style.display = "none";
-        displayDoWhat.style.display = "none";
-        refresh.style.display = "none";
-        setTimeout(showOutput, 3000);
-    }
     
-    function showOutput () {
-        loading.style.display = "none";
-        displayDoWhat.style.display = "block";
-        refresh.style.display = "block";
-    }
-    
-    i = Math.floor(Math.random() * 5); //Randomizes a number
+    let i = Math.floor(Math.random() * 5); //Randomizes a number
     paraOutput.innerHTML = arrObj.outdoors[i]; //Applies random number to array item to display
 });
 
 startThree.addEventListener('click', function() {
     showLoading();
-    function showLoading () {
-        loading.style.display = "block";
-        startButtons.style.display = "none";
-        displayDoWhat.style.display = "none";
-        refresh.style.display = "none";
-        setTimeout(showOutput, 3000);
-    }
     
-    function showOutput () {
-        loading.style.display = "none";
-        displayDoWhat.style.display = "block";
-        refresh.style.display = "block";
-    }
-    
-    i = Math.floor(Math.random() * 5); //Randomizes a number
+    let i = Math.floor(Math.random() * 5); //Randomizes a number
     paraOutput.innerHTML = arrObj.food[i]; //Applies random number to array item to display
 });
 
 startFour.addEventListener('click', function() {
     showLoading();
-    function showLoading () {
-        loading.style.display = "block";
-        startButtons.style.display = "none";
-        displayDoWhat.style.display = "none";
-        refresh.style.display = "none";
-        setTimeout(showOutput, 3000);
-    }
     
-    function showOutput () {
-        loading.style.display = "none";
-        displayDoWhat.style.display = "block";
-        refresh.style.display = "block";
-    }
-    
-    i = Math.floor(Math.random() * 5); //Randomizes a number
+    let i = Math.floor(Math.random() * 5); //Randomizes a number
     paraOutput.innerHTML = arrObj.entertain[i]; //Applies random number to array item to display
 });
 
 startFive.addEventListener('click', function() {
     showLoading();
-    function showLoading () {
-        loading.style.display = "block";
-        startButtons.style.display = "none";
-        displayDoWhat.style.display = "none";
-        refresh.style.display = "none";
-        setTimeout(showOutput, 3000);
-    }
     
-    function showOutput () {
-        loading.style.display = "none";
-        displayDoWhat.style.display = "block";
-        refresh.style.display = "block";
-    }
-    
-    i = Math.floor(Math.random() * 4); //Randomizes a number for category
-    j = Math.floor(Math.random() * 5); //Randomizes a number for category option
+    let i = Math.floor(Math.random() * 4); //Randomizes a number for category
+    let j = Math.floor(Math.random() * 5); //Randomizes a number for category option
     paraOutput.innerHTML = randArr[i][j]; //Applies random number to array item to display
 });
 
